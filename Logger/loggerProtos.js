@@ -6,7 +6,7 @@ const BaseLoggerProto = {
 
 const TableLoggerProto = Object.create(BaseLoggerProto);
 TableLoggerProto.log = function (...messages) {
-  BaseLoggerProto.log.call(null, messages.join(" | "));
+  BaseLoggerProto.log(messages.join(" | "));
 };
 
 const TableTimeLoggerProto = Object.create(TableLoggerProto);
@@ -18,7 +18,7 @@ TableTimeLoggerProto.log = function (...messages) {
       second: "2-digit",
     })
   );
-  TableLoggerProto.log.call(null, ...messages);
+  TableLoggerProto.log(...messages);
 };
 
 const baseLogger = Object.create(BaseLoggerProto);

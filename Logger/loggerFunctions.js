@@ -3,7 +3,7 @@ const logMessage = (message) => {
 };
 
 const logMessageTable = (...messages) => {
-  logMessage.call(null, messages.join(" | "));
+  logMessage(messages.join(" | "));
 };
 
 const logMessageTableDate = (...messages) => {
@@ -14,7 +14,7 @@ const logMessageTableDate = (...messages) => {
       second: "2-digit",
     })
   );
-  logMessageTable.call(null, ...messages);
+  logMessageTable(...messages);
 };
 
 logMessage("Hello World!");

@@ -7,7 +7,7 @@ function TableLogger() {}
 TableLogger.prototype = Object.create(BaseLogger.prototype);
 TableLogger.prototype.constructor = TableLogger;
 TableLogger.prototype.log = function (...messages) {
-  BaseLogger.prototype.log.call(null, messages.join(" | "));
+  BaseLogger.prototype.log(messages.join(" | "));
 };
 
 function TableTimeLogger() {}
@@ -21,7 +21,7 @@ TableTimeLogger.prototype.log = function (...messages) {
       second: "2-digit",
     })
   );
-  TableLogger.prototype.log.call(null, ...messages);
+  TableLogger.prototype.log(...messages);
 };
 
 const baseLogger = new BaseLogger();

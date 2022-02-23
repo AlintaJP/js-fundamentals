@@ -6,7 +6,7 @@ class BaseLogger {
 
 class TableLogger extends BaseLogger {
   log(...messages) {
-    super.log.call(null, messages.join(" | "));
+    super.log(messages.join(" | "));
   }
 }
 
@@ -19,7 +19,7 @@ class TableTimeLogger extends TableLogger {
         second: "2-digit",
       })
     );
-    super.log.call(null, ...messages);
+    super.log(...messages);
   }
 }
 
