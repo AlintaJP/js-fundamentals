@@ -3,8 +3,8 @@ class JQuery {
     this.elem;
   }
 
-  element(elem) {
-    this.elem = elem;
+  query(selector) {
+    this.elem = document.querySelector(selector);
     return this;
   }
 
@@ -115,14 +115,9 @@ class JQuery {
   }
 }
 
-const elem2 = document.querySelector(".element-2");
-const elem4 = document.querySelector(".element-4");
-const elem5 = document.querySelector(".element-5");
-const elem6 = document.querySelector(".element-6");
-
 const jquery = new JQuery();
 jquery
-  .element(elem2)
+  .query(".element-2")
   .addClass("some-class another-class")
   .removeClass("some-class")
   .append("<p class='jquery-elem'>JQUERY</p>")
@@ -132,7 +127,7 @@ jquery
   .css({ color: "green", "font-weight": "bold" });
 
 jquery
-  .element(elem4)
+  .query(".element-4")
   .text("Random text")
   .text()
   .css("background-color", "rgba(200, 200, 0)")
@@ -140,5 +135,5 @@ jquery
     alert("Hello!");
   });
 
-jquery.element(elem5).empty();
-jquery.element(elem6).css(["color", "background-color"]);
+jquery.query(".element-5").empty();
+jquery.query(".element-6").css(["color", "background-color"]);
