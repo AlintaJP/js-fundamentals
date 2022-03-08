@@ -13,31 +13,31 @@ var obj1 = { a: 1, b: 2 };
 var obj2 = { a: 2, c: 3, d: 4 };
 var obj3 = Object.assign(obj1, obj2);
 
-var obj1 = { a: 1, b: 2, c: 3, d: 4 };
-var a = obj1.a;
-var b = obj1.b;
-var c = obj1.c;
-var d = obj1.d;
+var obj4 = { a: 1, b: 2, c: 3, d: 4 };
+var a = obj4.a;
+var b = obj4.b;
+var c = obj4.c;
+var d = obj4.d;
 
 var a = 1;
 var b = 2;
 var c = 3;
 var d = 4;
-var obj1 = { a: a, b: b, c: c, d: d };
+var obj5 = { a: a, b: b, c: c, d: d };
 
 //ES6
-const obj1 = { a: 1, b: 2 };
-const obj2 = { a: 2, c: 3, d: 4 };
-const obj3 = { ...obj1, ...obj2 };
+const object1 = { a: 1, b: 2 };
+const object2 = { a: 2, c: 3, d: 4 };
+const object3 = { ...obj1, ...obj2 };
 
-const obj1 = { a: 1, b: 2, c: 3, d: 4 };
-const { a, b, c, d } = obj1;
+const object4 = { a: 1, b: 2, c: 3, d: 4 };
+const { a, b, c, d } = object4;
 
 const a = 1;
 const b = 2;
 const c = 3;
 const d = 4;
-const obj1 = { a, b, c, d };
+const object5 = { a, b, c, d };
 
 //ES5
 function isGreater(a, b, cb) {
@@ -60,11 +60,7 @@ isGreater(1, 2, function (result) {
 isGreater = (a, b) => {
   return new Promise((resolve, reject) => {
     try {
-      if (a > b) {
-        resolve(console.log("greater"));
-      } else {
-        resolve(console.log("smaller"));
-      }
+      a > b ? resolve(console.log("greater")) : resolve(console.log("smaller"));
     } catch (err) {
       reject(new Error("Something went wrong"));
     }
