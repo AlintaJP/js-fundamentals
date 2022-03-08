@@ -1,7 +1,5 @@
 class JQuery {
-  constructor() {
-    this.elem;
-  }
+  elem;
 
   query(selector) {
     this.elem = document.querySelector(selector);
